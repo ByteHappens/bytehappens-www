@@ -8,28 +8,19 @@ namespace ByteHappens.Web.Config {
     "$stateProvider",
     "$urlRouterProvider",
     ($stateProvider: angularui.StateProvider, $urlRouterProvider: angularui.UrlRouterProvider) => {
-      $urlRouterProvider.otherwise("/");
+      $urlRouterProvider.otherwise("");
 
-      $stateProvider.state("root", {
-        url: "",
-        template: `
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Welcome to ByteHappens !</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <p>
-        You are currently looking at a default parking page for this website. Please come back later to see if anything new has been added to this site.
-      </p>
-    </div>
-  </div>
-</div>`,
-        controller: "ByteHappensHomeController as ctrl",
-      });
+      $stateProvider
+        .state("base", {
+          abstract: true,
+          url: "",
+          templateUrl: "../../templates/base.html"
+        })
+        .state("base.home", {
+          url: "",
+          templateUrl: "../../templates/home.html",
+          controller: "HomeController as ctrl"
+        });
     }
   ]);
 }

@@ -3,7 +3,7 @@ import * as angular from "angular";
 import * as bytehappensrootscopeservice from "../interfaces/ibytehappensrootscopeservice";
 
 namespace ByteHappens.Web.Config {
-  class ByteHappensHomeController {
+  class HomeController {
     private static $inject: string[] = ["$rootScope"];
 
     private readonly _title: string = "Welcome - ByteHappens";
@@ -13,5 +13,5 @@ namespace ByteHappens.Web.Config {
     }
   }
 
-  angular.module("ByteHappens.Web").controller("ByteHappensHomeController", ByteHappensHomeController);
+  angular.module("ByteHappens.Web").controller("HomeController", HomeController);
 }

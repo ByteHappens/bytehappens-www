@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "clean": "grunt cleanAll",
-    "dev": "parcel src/index.html -d .dev/",
-    "bundle": "parcel build src/index.html -d .build/",
+    "dev": "grunt prepare && concurrently \"parcel .tmp/index.html -d .dev/\" \"grunt watch\"",
+    "bundle": "parcel build .tmp/index.html -d .build/",
     "publish": "gh-pages -r https://github.com/ByteHappens/bytehappens.github.io.git -d .dist -b master",
     "build": "grunt build",
     "deploy": "grunt deploy"
@@ -23,10 +23,13 @@
     "popper.js": "^1.14.5"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "gh-pages": "^2.0.1",
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-html2js": "^0.5.1",
     "grunt-shell": "^2.1.0",
     "node-sass": "^4.10.0",
     "parcel-bundler": "^1.10.3",
