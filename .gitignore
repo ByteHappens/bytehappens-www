@@ -62,5 +62,6 @@ typings/
 
 # Parcel
 .cache/
+.dev/
+.build/
 .dist/
-.temp/
