@@ -9,6 +9,8 @@ import "bootstrap";
 import "angular";
 import "@uirouter/angularjs";
 
+import "./bytehappens/web/interfaces/ibytehappensrootscopeservice";
+
 import "./bytehappens/web/app";
 import "./bytehappens/web/config/routes";
 import "./bytehappens/web/config/statechange";

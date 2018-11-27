@@ -1,7 +1,7 @@
 import * as angular from "angular";
 import * as angularui from "@uirouter/angularjs";
 
-namespace ByteHappens.Web.App.Config {
+namespace ByteHappens.Web.Config {
   let app = angular.module("ByteHappens.Web");
 
   app.config([
@@ -28,7 +28,7 @@ namespace ByteHappens.Web.App.Config {
     </div>
   </div>
 </div>`,
-        controller: "ByteHappensHomeController as ctrl"
+        controller: "ByteHappensHomeController as ctrl",
       });
     }
   ]);
