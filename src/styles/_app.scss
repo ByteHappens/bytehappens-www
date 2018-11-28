@@ -1,0 +1,36 @@
+$header-height: 48px;
+$footer-height: 32px;
+
+.wrapper {
+  @extend .bg-white;
+
+  position: relative;
+  padding: $header-height 0px $footer-height;
+
+  .header,
+  .footer {
+    position: absolute;
+    width: 100%;
+  }
+
+  .header {
+    top: 0px;
+  }
+
+  .footer {
+    bottom: 0px;
+  }
+
+  h1 {
+    @extend .text-primary;
+
+    text-align: center;
+  }
+
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: initial;
+  }
+}

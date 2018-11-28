@@ -1,0 +1,13 @@
+.header {
+  @extend .bg-dark;
+
+  line-height: $header-height;
+
+  .home {
+    display: inline-block;
+    width: $header-height;
+    height: $header-height;
+    background: transparent url("../images/sloth.png") no-repeat center center;
+    background-size: $header-height $header-height;
+  }
+}

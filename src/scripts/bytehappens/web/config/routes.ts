@@ -11,12 +11,12 @@ namespace ByteHappens.Web.Config {
       $urlRouterProvider.otherwise("");
 
       $stateProvider
-        .state("base", {
+        .state("app", {
           abstract: true,
           url: "",
-          templateUrl: "../../templates/base.html"
+          templateUrl: "../../templates/_app.html"
         })
-        .state("base.home", {
+        .state("app.home", {
           url: "",
           templateUrl: "../../templates/home.html",
           controller: "HomeController as ctrl"

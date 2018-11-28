@@ -1,0 +1,7 @@
+.footer {
+  @extend .bg-light;
+  @extend .text-muted;
+
+  line-height: $footer-height;
+  text-align: center;
+}
