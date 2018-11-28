@@ -1,3 +1,6 @@
+//  EBU: Need to import custom themes before
+@import "_theme.scss";
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "_index.scss";
