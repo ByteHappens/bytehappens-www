@@ -1,26 +1,27 @@
 import * as angular from "angular";
-import * as angularui from "@uirouter/angularjs";
+import { StateProvider, UrlRouterProvider } from "@uirouter/angularjs";
 
-namespace ByteHappens.Web.Config {
-  let app = angular.module("ByteHappens.Web");
+angular.module("ByteHappens.Web").config([
+  "$stateProvider",
+  "$urlRouterProvider",
+  ($stateProvider: StateProvider, $urlRouterProvider: UrlRouterProvider) => {
+    $urlRouterProvider.otherwise("");
 
-  app.config([
-    "$stateProvider",
-    "$urlRouterProvider",
-    ($stateProvider: angularui.StateProvider, $urlRouterProvider: angularui.UrlRouterProvider) => {
-      $urlRouterProvider.otherwise("");
-
-      $stateProvider
-        .state("app", {
-          abstract: true,
-          url: "",
-          templateUrl: "../../templates/_app.html"
-        })
-        .state("app.home", {
-          url: "",
-          templateUrl: "../../templates/home.html",
-          controller: "HomeController as ctrl"
-        });
-    }
-  ]);
-}
+    $stateProvider
+      .state("app", {
+        abstract: true,
+        url: "",
+        templateUrl: "../../templates/_app.html"
+      })
+      .state("app.home", {
+        url: "",
+        templateUrl: "../../templates/home.html",
+        controller: "HomeController as ctrl"
+      })
+      .state("app.about", {
+        url: "about",
+        templateUrl: "../../templates/about.html",
+        controller: "AboutController as ctrl"
+      });
+  }
+]);

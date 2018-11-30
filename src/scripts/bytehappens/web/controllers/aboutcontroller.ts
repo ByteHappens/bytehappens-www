@@ -1,13 +1,13 @@
 import * as angular from "angular";
 
-class HomeController extends BasePageController {
+class AboutController extends BasePageController {
   private static $inject: string[] = ["$rootScope"];
 
-  private readonly _title: string = "Home - ByteHappens";
+  private readonly _title: string = "About - ByteHappens";
 
   constructor(private $rootScope: IByteHappensRootscopeService) {
     super($rootScope);
-    $rootScope.pageTitle = this.GetTitle();
+    $rootScope.pageTitle = this._title;
   }
 
   protected GetTitle(): string {
@@ -15,4 +15,4 @@ class HomeController extends BasePageController {
   }
 }
 
-angular.module("ByteHappens.Web").controller("HomeController", HomeController);
+angular.module("ByteHappens.Web").controller("AboutController", AboutController);

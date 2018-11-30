@@ -1,16 +1,10 @@
 import * as angular from "angular";
 
-import * as bytehappensrootscopeservice from "../interfaces/ibytehappensrootscopeservice";
+angular.module("ByteHappens.Web").run([
+  "$rootScope",
+  ($rootScope: IByteHappensRootscopeService) => {
+    $rootScope.$on("$stateChangeStart", () => {});
 
-namespace ByteHappens.Web.Config {
-  let app = angular.module("ByteHappens.Web");
-
-  app.run([
-    "$rootScope",
-    ($rootScope: bytehappensrootscopeservice.ByteHappens.Web.Interfaces.IByteHappensRootscopeService) => {
-      $rootScope.$on("$stateChangeStart", () => {});
-
-      $rootScope.$on("$stateChangeSuccess", () => {});
-    }
-  ]);
-}
+    $rootScope.$on("$stateChangeSuccess", () => {});
+  }
+]);

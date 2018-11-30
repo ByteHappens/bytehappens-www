@@ -6,7 +6,6 @@ import "jquery";
 import "popper.js";
 import "bootstrap";
 
-import "angular";
 import "@uirouter/angularjs";
 
 import "./bytehappens/web/templates.js";
@@ -16,6 +15,8 @@ import "./bytehappens/web/app";
 import "./bytehappens/web/config/routes";
 import "./bytehappens/web/config/statechange";
 
+import "./bytehappens/web/controllers/basepagecontroller";
 import "./bytehappens/web/controllers/headercontroller";
 import "./bytehappens/web/controllers/footercontroller";
 import "./bytehappens/web/controllers/homecontroller";
+import "./bytehappens/web/controllers/aboutcontroller";

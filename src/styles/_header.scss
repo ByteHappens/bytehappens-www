@@ -1,13 +1,28 @@
+$logo-height: 32px;
+
 .header {
   @extend .bg-dark;
 
-  line-height: $header-height;
+  height: $header-height;
 
-  .home {
-    display: inline-block;
-    width: $header-height;
-    height: $header-height;
-    background: transparent url("../images/sloth.png") no-repeat center center;
-    background-size: $header-height $header-height;
+  .nav {
+    .nav-item {
+      .nav-link {
+        padding: 0px 16px;
+        line-height: $header-height;
+
+        &:first-child {
+          padding-left: 0px;
+        }
+      }
+    }
   }
+
+  // .home {
+  //   display: inline-block;
+  //   width: $logo-height;
+  //   height: $header-height;
+  //   background: transparent url("../images/scottchak.png") no-repeat center center;
+  //   background-size: $logo-height $logo-height;
+  // }
 }
