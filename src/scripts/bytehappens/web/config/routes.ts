@@ -14,12 +14,12 @@ angular.module("ByteHappens.Web").config([
         templateUrl: "../../templates/_app.html"
       })
       .state("app.home", {
-        url: "",
+        url: "/",
         templateUrl: "../../templates/home.html",
         controller: "HomeController as ctrl"
       })
       .state("app.about", {
-        url: "about",
+        url: "/about",
         templateUrl: "../../templates/about.html",
         controller: "AboutController as ctrl"
       });
