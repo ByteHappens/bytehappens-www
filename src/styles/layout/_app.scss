@@ -4,6 +4,8 @@
   position: relative;
   padding: $header-height 0px $footer-height;
 
+  font-size: $font-size-sm;
+
   .header,
   .footer {
     position: absolute;
