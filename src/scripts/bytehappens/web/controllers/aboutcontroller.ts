@@ -5,7 +5,7 @@ import { BasePageController } from "./basepagecontroller";
 class AboutController extends BasePageController {
   private static $inject: string[] = ["$rootScope"];
 
-  constructor(private $rootScope: IByteHappensRootscopeService) {
+  constructor(private $rootScope: ICustomRootscopeService) {
     super($rootScope, "About - ByteHappens");
   }
 }

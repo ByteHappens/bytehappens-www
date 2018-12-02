@@ -12,7 +12,7 @@ import "./bytehappens/web/templates.js";
 
 import "./bytehappens/web/app";
 
-import "./bytehappens/web/interfaces/ibytehappensrootscopeservice";
+import "./bytehappens/web/interfaces/icustomrootscopeservice";
 
 import "./bytehappens/web/controllers/layout/headercontroller";
 import "./bytehappens/web/controllers/layout/footercontroller";

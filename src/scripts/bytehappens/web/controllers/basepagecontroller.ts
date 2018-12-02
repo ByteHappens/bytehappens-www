@@ -1,5 +1,5 @@
 export abstract class BasePageController {
-  constructor($rootScope: IByteHappensRootscopeService, pageTitle: string) {
+  constructor($rootScope: ICustomRootscopeService, pageTitle: string) {
     $rootScope.pageTitle = pageTitle;
   }
 }
