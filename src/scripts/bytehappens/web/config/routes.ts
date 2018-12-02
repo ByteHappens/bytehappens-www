@@ -11,7 +11,7 @@ angular.module("ByteHappens.Web").config([
       .state("app", {
         abstract: true,
         url: "",
-        templateUrl: "../../templates/_app.html"
+        templateUrl: "../../templates/layout/_app.html"
       })
       .state("app.home", {
         url: "/",

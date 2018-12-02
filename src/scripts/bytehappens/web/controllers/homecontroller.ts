@@ -1,17 +1,12 @@
 import * as angular from "angular";
 
+import { BasePageController } from "./basepagecontroller";
+
 class HomeController extends BasePageController {
   private static $inject: string[] = ["$rootScope"];
 
-  private readonly _title: string = "Home - ByteHappens";
-
   constructor(private $rootScope: IByteHappensRootscopeService) {
-    super($rootScope);
-    $rootScope.pageTitle = this.GetTitle();
-  }
-
-  protected GetTitle(): string {
-    return this._title;
+    super($rootScope, "Home - ByteHappens");
   }
 }
 
